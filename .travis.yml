@@ -1,0 +1,17 @@
+notifications:
+  email:
+    on_failure: never
+    on_success: never
+
+language: java
+
+addons:
+  sonarcloud:
+    organization: "amarteleto-github"
+    token:
+      secure: $SONAR_KEY
+
+script:
+  - mvn clean install sonar:sonar -DfailIfNoTests=false -Dmaven.test.failure.ignore=true -Dtest=AllTest
+ 
+  
