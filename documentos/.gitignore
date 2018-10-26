@@ -1,0 +1,5 @@
+/*.bak
+/derby.log
+/target/
+/target/**
+/bin/
